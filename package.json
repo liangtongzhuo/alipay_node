@@ -1,0 +1,34 @@
+{
+  "name": "alipay_node",
+  "version": "1.0.0",
+  "description": "alipay node demo",
+  "main": "index.js",
+  "dependencies": {
+    "crypto": "0.0.3",
+    "express": "^4.15.2",
+    "fs": "^0.0.1-security",
+    "iconv-lite": "^0.4.13",
+    "moment": "^2.15.1",
+    "n-crypto": "^0.2.1",
+    "node-rsa": "^0.4.2",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hi363138911/alipay_node.git"
+  },
+  "keywords": [
+    "node",
+    "alipay"
+  ],
+  "author": "liangtongzhuo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hi363138911/alipay_node/issues"
+  },
+  "homepage": "https://github.com/hi363138911/alipay_node#readme"
+}
