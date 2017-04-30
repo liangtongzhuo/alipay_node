@@ -8,8 +8,8 @@ router.post('/verify', function (req, res) {
     // router.get('/return', function(req, res) {
     ///验证签名
     if (!RSAVerify(req.body)) {
-        res.end('error')
         console.log('验证签名失败');
+        res.end('error')
         return //验证失败 就返回
     }
 

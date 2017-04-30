@@ -28,13 +28,13 @@ const creatOrder = function (userId, price, res) {
 }
 
 //根据唯一ID创建，价格，时间，生成订单对象
-const creatOrderInfo = function (price, orderId, creatTime, res) {
+const creatOrderInfo = function (price, orderId, currenTime, res) {
     const biz_content = {
         timeout_express: "30m",//超时时间
         seller_id: "20884228000000000",// 卖家支付宝用户号
         product_code: "QUICK_MSECURITY_PAY",
         total_amount: price + "", //价格
-        subject: "vip ASMR", //介绍
+        subject: "vip", //介绍
         body: "vip", //详情介绍
         out_trade_no: orderId //订单的唯一id, 
     }
@@ -46,9 +46,9 @@ const creatOrderInfo = function (price, orderId, creatTime, res) {
         biz_content: jsonBiz_content, //订单基础信息
         charset: 'utf-8',
         method: 'alipay.trade.app.pay',//支付接口名称
-        notify_url: 'http://tongrenyinsheng.leanapp.cn/todos/return',
+        notify_url: 'http://www.ziji.com/verify',  //自己设置异步回调接口
         sign_type: 'RSA',
-        timestamp: moment(creatTime).format('YYYY-MM-DD HH:mm:ss'), //时间
+        timestamp: moment(currenTime).format('YYYY-MM-DD HH:mm:ss'), //时间
         version: '1.0'
     }
 
