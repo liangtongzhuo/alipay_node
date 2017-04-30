@@ -1,7 +1,7 @@
 在看代码之前我们需要了解一下， 服务器之间的交互流程。
 
 
-<img src="http://ac-2my9ah1h.clouddn.com/49b35ebaafa944f65e91.jpg" width="500">
+<img src="000.jpg" >
 
 Node 服务器只用关心 1  ／ 2 ／ 7 ／8  流程。
 iOS 端只用关心 1 ／ 2  ／ 3 ／ 6  流程。
