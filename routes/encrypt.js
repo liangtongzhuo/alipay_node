@@ -58,8 +58,8 @@ const creatOrderInfo = function (price, orderId, currenTime, res) {
     //RSA加密订单
     const sign = crypto.createSign('RSA-SHA1');
     const private_key = fs.readFileSync('./rsa_private_key_pkcs8.pem');//注意生成的密钥，是带数字8的。
-    sign.update(info);//设置验证签名参数
-    const signOrder = encodeURIComponent(sign.sign(private_key)); //RSA加密后  在encoded
+    sign.update(info,'utf8');//设置验证签名参数
+    const signOrder = encodeURIComponent(sign.sign(private_key,'base64')); //RSA加密后  在encoded
 
     //----------------------------------------------------------------------
     //拼接订单encode

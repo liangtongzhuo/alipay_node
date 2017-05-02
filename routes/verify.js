@@ -36,7 +36,7 @@ const RSAVerify = function (object) {
             prestr.push(`${e}=${object[e]}`);
         }
     });
-    //排序
+    //拼接
     prestr = prestr.join('&')
     //根据排序后的订单验签名
     return crypto.createVerify('RSA-SHA1').update(prestr).verify(fs.readFileSync('./rsa_public_key.pem'), object['sign'], 'base64');//注意这个公钥是支付宝给的，并不是自己生成的。
